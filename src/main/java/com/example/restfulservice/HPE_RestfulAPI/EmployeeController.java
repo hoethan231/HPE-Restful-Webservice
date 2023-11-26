@@ -1,7 +1,6 @@
 package com.example.restfulservice.HPE_RestfulAPI;
 
 import java.net.URI;
-
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,7 @@ public class EmployeeController {
     }
 
     // POST method to add employee to list
-    @PostMapping(path = "/", consumes = "applications/json", produces = "applications/json")
+    @PostMapping(path = "/", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Object> addEmployee(@RequestBody Employee employee) {
 
         Integer id = manager.getEmployees().getList().size() + 1;
